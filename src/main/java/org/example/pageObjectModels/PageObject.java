@@ -16,7 +16,7 @@ public abstract class PageObject {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         var hostProperty = PropertiesReader.getInstance().getProperty("HOST");
-        if (hostProperty == null || hostProperty.isEmpty()) host = "https://demoqa.com";
+        if (hostProperty == null || hostProperty.isEmpty()) host = "https://login.salesforce.com";
         else host = hostProperty;
         PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
